@@ -48,7 +48,7 @@ Remove the margin in all browsers.
 
 body {
 	margin: 0;
-	background-color: rgb(237, 237, 237);
+	animation: aziz cubic-bezier(10, 10, 20, 20) ease-out 2s;
 }
 
 /*
@@ -237,30 +237,40 @@ main {
   width: 900px;
   height: 740px;
   background-color: rgb(209, 85, 51);
+	box-shadow:	inset 0px 0px 10px rgb(44, 7, 7),
+							10px 12px 0px rgb(68, 3, 3);
+}
+
+.container {
+	display: grid;
+	width: 650px;
+	height: 550px;
 }
 
 .top-hole {
 	left: 34rem;
 	top: 60px;
-	position: fixed;
+	position: absolute;
 	z-index: 2;
 	background-color: rgb(226, 226, 226);
 	width: 300px;
 	height: 40px;
 	border-radius: 20px;
-	box-shadow: 0px 0px 4px rgb(28, 26, 26);
+	box-shadow: inset 1px 1px 4px rgb(28, 26, 26),
+										0px 0px 4px rgb(46, 8, 8);
 }
 
 .text-left {
 	position: absolute;
-	top: 5rem;
-	left: 5rem;
+	top: 4rem;
+	left: 6rem;
 }
 .left-text {
-font-size: 44PX;
-writing-mode: vertical-rl;
-text-orientation: upright;
-font-family: "Sixtyfour Convergence";
+		cursor: pointer;
+		font-size: 55px;
+		writing-mode: vertical-rl;
+		text-orientation: upright;
+		font-family: "Sixtyfour Convergence";
 
 }
 .inner-part {
@@ -276,11 +286,10 @@ font-family: "Sixtyfour Convergence";
 	flex-direction: column;
 	position: absolute;
 	top: 5.5em;
-	left: 65.5em;
+	left: 66.5em;
   padding-top: 40px;
   padding-bottom: 35px;
   display: flex;
-  width: 780px;
 	gap: 3em;
 	justify-content: space-evenly;
 }
@@ -298,21 +307,70 @@ font-family: "Sixtyfour Convergence";
 	font-size: 20px;
 	background-color: aliceblue;
 	color: rgb(73, 67, 67);
-	box-shadow: 4px 4px 2px black;
+	box-shadow: 5px 2px 4px black,
+							inset 0px 0px 10px rgb(77, 11, 11);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+.button-4 {
+	background-color: red;
+	border: 4px solid rgb(54, 47, 47);
+	box-shadow: inset 0px 0px 20px rgb(48, 18, 18);
+	transition: transform 0.2s ease-out;
+}
+
+
+.first-line {
+	width: 12px;
+	height: 70px;
+	background-color: white;
+	transform: rotate(135deg);
+	box-shadow: 0px 0px 5px rgb(62, 27, 27);
+}
+
+.second-line {
+	width: 12px;
+	height: 70px;
+	background-color: white;
+	transform: rotate(-135deg);
+	margin-bottom: -7px;
+	margin-top: -7px;
+	margin-left: -11px;
+	border: none;
+	box-shadow: 0px 0px 5px rgb(62, 27, 27);
+}
 .buttons img {
 	width: 77px;
 }
 
 #color {
-	width:70px;
-	height: 70px;
-	border-radius: 100% ;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
 	border: none;
+}
+
+#size-grid {
+	width: 120px;
+	border-radius: 20px;
+	padding: 0.5em;
+	position: absolute;
+	top: 4em;
+	left: 60rem;
+}
+
+#set-grid-size {
+	border: none;
+	text-align: center;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	padding: 0.5em;
+	position: absolute;
+	top: 4em;
+	left: 68rem;
 }
 
 .clear-range {
@@ -337,24 +395,26 @@ font-family: "Sixtyfour Convergence";
 	background: rgb(255, 245, 112);
 	width: 40px;
 	height: 40px;
-	box-shadow: inset 0px 2px 1.2px rgb(180, 151, 23),
+	box-shadow: inset 0px 2px 1.2px rgb(157, 136, 43),
 							inset 8px 0px 1px rgba(106, 76, 24, 0.449),
-							inset -8px 0px 1px rgba(106, 76, 24, 0.495),
-							inset 0px -2px 1.2px rgb(180, 151, 23)
+							inset -8px 0px 1px rgba(106, 76, 24, 0.449),
+							inset 0px -2px 1px rgba(157, 136, 43),
+							inset 7px 1px 20px rgb(172, 156, 156),
+							inset -7px 1px 20px rgb(193, 173, 173),
+							0px 0px 8px rgb(63, 17, 17)
 	;
 }
 
 
-
+/*
 .grid-item {
   width: 40.5px;
   height: 34.4px;
   border: 1px solid black;
-}
+}*/
 
 
 .cursor {
-	background-color: lightblue;
 	position: fixed;
 	width: 30px;
 	height: 30px;
@@ -370,7 +430,6 @@ font-family: "Sixtyfour Convergence";
 .ball {
 	height: 30px;
 	width: 30px;
-	background: red;
 	transition: transform 0.5s;
 	position: absolute;
 	top: 0;
@@ -378,3 +437,36 @@ font-family: "Sixtyfour Convergence";
 	border-radius: 25px;
 }
 
+.github {
+	position: absolute;
+	top: 56px;
+	left: 880px;
+}
+
+.secret-message {
+	width: 150px;
+	height: 180px;
+	border-radius: 20px;
+	background-color: rgb(255, 255, 255);
+	border: none;
+	position: absolute;
+	top: 38rem;
+	left: 82rem;
+}
+
+.message {
+	background-color: aliceblue;
+	border-radius: 20px;
+	text-align: center;
+	font-family: "Nothing You Could Do";
+}
+
+
+.clear {
+	display: none;
+}
+
+::marker {
+	color: rgba(201, 0, 0, 0.778);
+	
+}
