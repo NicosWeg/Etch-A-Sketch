@@ -28,12 +28,12 @@ color.addEventListener('change', (event) => {
 
 
 set.addEventListener('click', () => {
-  if(input.value > 2 && input.value <= 100) {
+  if(input.value > 4 && input.value <= 100) {
      gridSize = parseInt(input.value);
       input.value = '';
       clearGrid();
   }else {
-    alert('Input is invalid');
+    alert('Enter a number between 4-100');
   }
  
 });
@@ -43,6 +43,12 @@ hexelop.addEventListener('click', () => {
  isColoured = true;
  color.value = '#ffffff';
 });
+
+heart.addEventListener('click', () => {
+  currentValue = `rgb(${Math.floor(Math.random() *250)}, ${Math.floor(Math.random() *250)}, ${Math.floor(Math.random() *250)})`;
+  isColoured = true;
+  color.value = '#ffffff';
+})
 
 
 function createGrid(int) {

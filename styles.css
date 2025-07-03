@@ -271,6 +271,8 @@ main {
 		writing-mode: vertical-rl;
 		text-orientation: upright;
 		font-family: "Sixtyfour Convergence";
+		text-shadow: 5px 5px 2px rgb(0, 207, 31),
+									-8px 8px 1px rgb(217, 210, 0);
 
 }
 .inner-part {
@@ -353,24 +355,35 @@ main {
 }
 
 #size-grid {
-	width: 120px;
+	width: 140px;
 	border-radius: 20px;
 	padding: 0.5em;
 	position: absolute;
 	top: 4em;
 	left: 60rem;
+	border: none;
+	background-color: white;
+	box-shadow: inset 0px 0px 3px rgb(67, 22, 22);
 }
 
 #set-grid-size {
+	background-color: white;
+	font-weight: bold;
 	border: none;
-	text-align: center;
-	height: 40px;
+	height: 29px;
 	width: 40px;
 	border-radius: 50%;
-	padding: 0.5em;
 	position: absolute;
-	top: 4em;
-	left: 68rem;
+	top: 4.2em;
+	left: 66.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.plus-btn {
+	padding-bottom: 7px;
+	font-size: 33px;
 }
 
 .clear-range {
